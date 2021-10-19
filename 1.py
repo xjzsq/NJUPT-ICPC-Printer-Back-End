@@ -29,7 +29,7 @@ class Resquest(BaseHTTPRequestHandler):
         post_data = json.loads(self.rfile.read(length))
         print(post_data)
         f = open("1.txt", "w")
-        f.write(post_data["no"]+"\n")
+        f.write("队伍编号："+post_data["no"]+"\n")
         f.write(post_data["code"])
         f.close()
         printer("1.txt")
